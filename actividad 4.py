@@ -245,7 +245,6 @@ while erroresEncontrados:
     elif alfabeto1.isspace()!=True or len(alfabeto1)!=0:
         elementoFinal=alfabeto1[len(alfabeto1)-1]
         elementoInicial=alfabeto1[0]
-        break
     if alfabeto1.find(",,")!=-1 or elementoFinal=="," or elementoInicial=="," or alfabeto1.find(" ")!=-1:
         print("\n|--error: se ha encontrado un espacio vacio o un simbolo del alfabeto 1 es un espacio vacio--|.\n")
     elif alfabeto1.find(",,")==-1 and elementoFinal!="," and elementoInicial!="," and alfabeto1.find(" ")==-1:
