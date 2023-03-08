@@ -454,7 +454,7 @@ while programaIniciado:
             print("\n|--error: no ha ingresado una opcion valida--|.\n")
             opcion=0
     while opcion==5:
-        opcion=input('''este es el menu del alfabeto.
+        opcion=input('''este es el menu del lenguaje.
     1) realizar la unión de lenguajes.
     2) realizar la diferencia entre lenguajes (A-B).
     3) realizar la intersección entre lenguajes.
