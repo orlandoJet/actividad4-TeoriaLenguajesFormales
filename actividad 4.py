@@ -445,7 +445,9 @@ while programaIniciado:
           
             if alfabeto1=="" and alfabeto2=="":
                 print("\n|--error: ambos alfabetos son conjuntos vacios--|.\n")
-            opcion==5
+                opcion=0
+            else:
+                opcion=5
         elif opcion==6:
             programaIniciado=False
         else:
