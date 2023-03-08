@@ -295,6 +295,7 @@ while indexComa1!=-1 or indexComa2!=-1:
             alfabetoArray1.append(simbolo1)            
         if alfabeto2=="":
             alfabetoArray2.append("")
+            indexComa2=-1
         else:
             indexComa2=alfabeto2.find(",")
             aux2=indexComa2
@@ -397,6 +398,12 @@ while programaIniciado:
                     if cant.isdigit()!=True:
                         print("\n|--error: no ha ingresado un numero valido para la cantidad de palabras--|.\n")
                         opcion=0
+                    else:
+                        cant=int(cant)
+                        if nombre=="A":
+                            solicitud.comandoInicio(comandoCerraduraEstrella(operacion,alfabetoArray1,nombre,cant))
+                        solicitud.comandoEjecucion()
+                        opcion=0
                 if alfabeto2!="" and nombre=="B":
                     cant=input("\ndigite la cantidad de palabras que tendra la cerradura de estrella:")
                     if cant.isdigit()!=True:
@@ -404,9 +411,7 @@ while programaIniciado:
                         opcion=0
                     else:
                         cant=int(cant)
-                        if nombre=="A":
-                            solicitud.comandoInicio(comandoCerraduraEstrella(operacion,alfabetoArray1,nombre,cant))
-                        elif nombre=="B":
+                        if nombre=="B":
                             solicitud.comandoInicio(comandoCerraduraEstrella(operacion,alfabetoArray2,nombre,cant))
                         solicitud.comandoEjecucion()
                         opcion=0
